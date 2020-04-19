@@ -31,8 +31,7 @@ import java.util.List;
 public class PatientDomainAggregateUpdateAppV1 extends AbstractPatientDomainAggregateUpdateApp {
 
     public PatientDomainAggregateUpdateAppV1(
-            @Qualifier("application-configuration-factory") KafkaStreamConfigurationFactory configurationFactory,
-            @Value("${external.topics:domain_aggregate_patient, notification_domain_entity_doctor}") String[] listeningTopics) {
+            @Qualifier("application-configuration-factory") KafkaStreamConfigurationFactory configurationFactory) {
         super(configurationFactory);
     }
 
